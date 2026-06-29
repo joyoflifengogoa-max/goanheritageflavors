@@ -1,156 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goan Heritage Flavors - 450 Years Preserved by Goan Grandmothers</title>
-    <meta name="description" content="Authentic Indo-Portuguese recipes hand-made by Goan Grandmothers. Every purchase supports Joy of Life NGO Goa - Children & Elders since 2017.">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #fff9f5; color: #333; line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .header { background: #c2410c; color: white; padding: 40px 20px; text-align: center; }
-        h1 { margin: 0; font-size: 36px; }
-        .heritage { font-size: 16px; margin-top: 8px; opacity: 0.95; }
-        .tagline { font-style: italic; color: #9a3412; font-size: 20px; text-align: center; margin: 25px 0; }
-        .mission-box { background: #dc2626; color: white; padding: 25px; margin: 30px 0; border-radius: 8px; text-align: center; }
-        .mission-box h2 { margin: 0; font-size: 22px; }
-        .heritage-box { background: #fff7ed; border-left: 5px solid #ea580c; padding: 25px; margin: 30px 0; border-radius: 8px; }
-        .heritage-box h2 { color: #ea580c; margin-top: 0; }
-        .grandmother-box { background: #fff3e0; border-left: 5px solid #c2410c; padding: 25px; margin: 30px 0; border-radius: 8px; }
-        .grandmother-box h2 { color: #c2410c; margin-top: 0; font-size: 24px; }
-        .ngo-box { background: #f0f9ff; border: 2px solid #9a3412; padding: 15px; margin: 20px 0; border-radius: 8px; text-align: center; }
-        .category { margin: 40px 0; }
-        .category h2 { color: #c2410c; border-bottom: 3px solid #fed7aa; padding-bottom: 10px; font-size: 28px; }
-        .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
-        .product { background: white; border: 1px solid #fed7aa; padding: 20px; border-radius: 12px; text-align: center; }
-        .product h3 { margin: 10px 0; color: #9a3412; font-size: 18px; }
-        .made-by { font-size: 12px; color: #c2410c; font-weight: bold; margin: 8px 0; }
-        .mission-line { font-size: 11px; color: #dc2626; font-weight: bold; margin: 8px 0; font-style: italic; }
-        .btn { display: block; background: #25D366; color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; margin-top: 12px; }
-        .btn-map { background: #1a73e8; text-align: center; margin: 30px 0; padding: 18px; font-size: 18px; }
-        .trust-box { background: #f9fafb; border: 1px solid #e5e7eb; padding: 20px; margin: 40px 0; border-radius: 8px; text-align: center; }
-        .trust-box h3 { color: #9a3412; margin-top: 0; }
-        @media (max-width: 600px) { .products { grid-template-columns: 1fr; } h1 { font-size: 28px; } .mission-box h2 { font-size: 18px; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy of Life Goan Heritage Flavors | Authentic Goan Food Since 1940</title>
+  <meta name="description" content="Authentic Goan Portuguese heritage food made by Goan Grandmothers. Every purchase supports Joy of Life NGO Goa - Children & Elders. Order online across Goa.">
+  <style>
+    body { font-family: Georgia, serif; margin: 0; background: #fdfaf6; color: #2c1810; }
+    .header { background: #8B4513; color: white; text-align: center; padding: 30px 15px; }
+    .header h1 { margin: 0; font-size: 1.9rem; }
+    .tagline { font-size: 1rem; margin: 8px 0; font-style: italic; }
+    .ngo { font-size: 0.9rem; opacity: 0.9; }
+    .food-waste { background: linear-gradient(135deg, #D4AF37, #8B4513); color: white; text-align: center; padding: 25px 20px; }
+    .food-waste p { font-size: 1.4rem; font-weight: bold; margin: 0 0 8px 0; font-style: italic; line-height: 1.4; }
+    .food-waste span { font-size: 0.95rem; opacity: 0.95; }
+    .heritage-banner { background: #fff8e1; color: #8B4513; text-align: center; padding: 15px; font-weight: bold; border-bottom: 3px solid #D4AF37; font-size: 1rem; }
+    .ngo-support { background: #fff8e1; color: #8B4513; text-align: center; padding: 12px; font-weight: bold; border-bottom: 2px solid #D4AF37; font-size: 0.9rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px 15px; }
+    .section-title { color: #8B4513; font-size: 1.6rem; border-bottom: 3px solid #D4AF37; padding-bottom: 8px; margin: 40px 0 20px 0; }
+    .section-subtitle { color: #8B4513; text-align: center; font-style: italic; margin: -10px 0 20px 0; font-size: 0.95rem; }
+    .category-divider { color: #D4AF37; text-align: center; margin: 30px 0 15px 0; font-size: 1.1rem; font-weight: bold; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+    .product { background: white; border: 2px solid #D4AF37; border-radius: 10px; padding: 18px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .product h3 { color: #8B4513; font-size: 1.3rem; margin: 10px 0 5px 0; text-align: center; }
+    .made-by { color: #D4AF37; text-align: center; font-weight: bold; margin-bottom: 4px; font-size: 0.9rem; }
+    .ngo-line { color: #8B4513; text-align: center; font-size: 0.75rem; font-style: italic; margin-bottom: 8px; line-height: 1.3; }
+    .homely-tag { color: #2c1810; text-align: center; font-size: 0.8rem; font-weight: 600; margin-bottom: 8px; font-style: italic; }
+    .flavor-line { color: #8B4513; text-align: center; font-size: 0.85rem; font-weight: bold; margin-bottom: 10px; }
+    .description { line-height: 1.5; margin: 10px 0; font-size: 0.9rem; }
+    .authentic-tag { background: #D4AF37; color: #2c1810; padding: 3px 7px; display: inline-block; font-weight: bold; font-size: 0.75rem; margin-bottom: 10px; }
+    .heritage { background: #fdfaf6; padding: 10px; border-left: 3px solid #8B4513; margin: 10px 0; font-size: 0.85rem; font-style: italic; }
+    .order-btn { background: #25D366; color: white; border: none; padding: 12px 18px; font-size: 0.95rem; font-weight: bold; border-radius: 5px; cursor: pointer; width: 100%; margin-top: 10px; text-decoration: none; display: block; text-align: center; }
+    .order-btn:hover { background: #1da851; }
+    .service-area { background: #8B4513; color: white; text-align: center; padding: 20px 15px; margin-top: 40px; }
+    .service-area h3 { margin: 0 0 10px 0; font-size: 1.3rem; }
+    footer { background: #2c1810; color: white; text-align: center; padding: 25px 15px; font-size: 0.9rem; }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <img src="logo.png" alt="Joy of Life Logo" style="width:150px; margin:0 auto 15px; display:block; border-radius:10px;">
-        <h1>Goan Heritage Flavors</h1>
-            <h2>"Wasting food today is a food shortage tomorrow"</h2>
-            <p style="margin: 10px 0 0 0; font-size: 14px; opacity: 0.9;">– Joy of Life NGO Goa</p>
-            <p style="margin: 15px 0 0 0; font-size: 16px; font-weight: bold;">Every purchase supports Joy of Life NGO Goa<br>Children & Elders since 2017</p>
-        </div>
+  <div class="header">
+    <h1>Joy of Life Goan Heritage Flavors</h1>
+    <p class="tagline">Preserving Authentic Goan Portuguese Heritage Food & Flavors Since 1940</p>
+    <p class="ngo">An initiative by Joy of Life NGO, Goa</p>
+  </div>
+  
+  <div class="food-waste">
+    <p>"Wasting food today is a food shortage tomorrow"</p>
+    <span>– Joy of Life NGO Goa</span>
+  </div>
 
-        <div class= "heritage-box">
-            <h2>Joy of Life Goan Heritage Flavors</h2>
-            <p><strong>Encompasses the deep, aromatic, and deeply satisfying culinary traditions of Goa.</strong></p>
-            <p>It brings together centuries of Portuguese influence with local coastal spices, indigenous kokum, and freshly harvested coconuts to create an unforgettable, authentic dining experience.</p>
-            <p><strong>Goan cuisine is fundamentally defined by three core pillars:</strong></p>
-            <p><strong>• The Tang:</strong> The legendary use of local toddy vinegar and kokum gives curries their signature flavor.</p>
-        </div>
+  <div class="heritage-banner">
+    This is not charity. This is heritage. When you buy, a grandmother earns. A recipe lives. A child gets a meal.
+  </div>
+  
+  <div class="ngo-support">
+    Every purchase supports Joy of Life NGO Goa - Children & Elders
+  </div>
 
-        <div class="grandmother-box">
-            <h2>But these flavors are disappearing.</h2>
-            <p><strong>Joy of Life NGO Goa partners with Senior Citizen Self Help Groups</strong> to preserve authentic recipes from our ancestors.</p>
-            <p>Every jar is <strong>hand-ground by Goan grandmothers</strong> who need income, who have the talent, who carry 450 years in their hands.</p>
-            <p><strong>This is not charity. This is heritage.</strong><br>
-            When you buy, a grandmother earns. A recipe lives. A child gets a meal.</p>
-        </div>
+  <div class="container">
+    
+    <!-- SECTION 1: PURE VEGETARIAN -->
+    <h2 class="section-title">1. Pure Vegetarian - 100% VEG</h2>
+    <p class="section-subtitle">No Onion No Garlic available on request • For all Hindu families</p>
+    <div class="products">
+      <div class="product">
+        <h3>MUSHROOM XACUTI 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Veg mushroom curry. 100% Vegetarian</p>
+        <p class="description"><strong>Description:</strong> Fresh mushrooms in roasted coconut Xacuti masala. No meat, no egg. Heat & eat.</p>
+        <div class="authentic-tag">100% VEG</div>
+        <a href="https://wa.me/919420429066?text=Order%20Mushroom%20Xacuti%20250g%20VEG" class="order-btn">📱 Ask Price & Order</a>
+      </div>
 
-        <div class="ngo-box">
-            <strong>Goan Heritage Flavors</strong><br>
-            A Self Help Group of <strong>Joy of Life NGO Goa</strong><br>
-            <strong>Founded by Joy of Life NGO Goa</strong> | Registered since 2017<br>
-            Cancer children • Zero Hunger meals • Essential Threads<br>
-            <div style="font-size: 13px; color: #9a3412; margin-top: 10px;">NGO Helpline: +91 94204 29066</div>
-        </div>
-
-        <div class="category">
-            <h2>1. Heritage Masala Powders</h2>
-            <div class="products">
-                <div class="product"><h3>Xacuti Masala 200g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Xacuti%20Masala?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Vindalho Masala 200g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Vindalho%20Masala?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Sorpotel Masala 200g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Sorpotel%20Masala?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Cafreal Masala 200g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Cafreal%20Masala?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Baffat Masala 200g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Baffat%20Masala?" class="btn">📱 Ask Price & Order</a></div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>2. Masala Pastes - Ready to Cook</h2>
-            <div class="products">
-                <div class="product"><h3>Recheado Masala Paste</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Recheado%20Paste?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Green Masala Paste</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Green%20Masala%20Paste?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Balchao Masala Paste</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Balchao%20Paste?" class="btn">📱 Ask Price & Order</a></div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>3. Pork Heritage - Sorpotel, Vindalho, Baffat</h2>
-            <div class="products">
-                <div class="product"><h3>Pork Sorpotel 250g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Pork%20Sorpotel?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Pork Vindalho 250g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Pork%20Vindalho?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Pork Baffat 250g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Pork%20Baffat?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Pork Assado 250g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Pork%20Assado?" class="btn">📱 Ask Price & Order</a></div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>4. Seafood Treasures - Balchao, Molho, Vindalho</h2>
-            <div class="products">
-                <div class="product"><h3>Prawns Balchao 200g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Prawn%20Balchao?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>King Fish Balchao 200g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20King%20Fish%20Balchao?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Shark Balchao 200g</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Shark%20Balchao?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Mackerel Molho</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Mackerel%20Molho?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Squids Vindalho</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Squids%20Vindalho?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Toddy Vinegar</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Toddy%20Vinegar?" class="btn">📱 Ask Price & Order</a></div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>5. Chicken & Beef Heritage</h2>
-            <div class="products">
-                <div class="product"><h3>Chicken Xacuti</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Chicken%20Xacuti?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Chicken Cafreal</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Chicken%20Cafreal?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Beef Baffat</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Beef%20Baffat?" class="btn">📱 Ask Price & Order</a></div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>6. Goan Sweets & Biriyani</h2>
-            <div class="products">
-                <div class="product"><h3>Bebinca - Traditional</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Bebinca?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Dodol - Black Jaggery</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Dodol?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Dum Biriyani - Goan Style</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Dum%20Biriyani?" class="btn">📱 Ask Price & Order</a></div>
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>7. Goan Bites & Bytes - Snacks & Party</h2>
-            <div class="products">
-                <div class="product"><h3>Potato Chops</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Potato%20Chops?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Goan Samosas</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Goan%20Samosas?" class="btn">📱 Ask Price & Order</a></div>
-                <div class="product"><h3>Rissois</h3><div class="made-by">Made by Goan Grandmothers</div><div class="mission-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</div><a href="https://wa.me/918668638101?text=I%20want%20to%20support%20grandmothers.%20Price%20for%20Rissois?" class="btn">📱 Ask Price & Order</a></div>
-            </div>
-        </div>
-
-        <a href="https://maps.google.com/?q=15.4989,73.8278" class="btn btn-map">📍 Visit Us in Panjim - Get Directions</a>
-
-        <div class="trust-box">
-            <h3>Our Promise: Transparency & Trust</h3>
-            <p><strong>100% of profits support Joy of Life NGO Goa initiatives:</strong><br>
-            Cancer Children Care • Zero Hunger Meals • Essential Threads for Elderly</p>
-            <p>Every purchase receipt available. Visit our kitchen in Panjim to see grandmothers at work.</p>
-            <p><strong>NGO Registration:</strong> Since 2017 | <strong>Helpline:</strong> +91 94204 29066</p>
-        </div>
+      <div class="product">
+        <h3>VEG PATTICE 6pcs</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Crispy veg patties. 100% Vegetarian</p>
+        <p class="description"><strong>Description:</strong> Potato & veg filling with Goan spices. Frozen ready-to-fry. No meat.</p>
+        <div class="authentic-tag">100% VEG</div>
+        <a href="https://wa.me/919356476494?text=Order%20Veg%20Pattice%206pcs%20-%20₹180" class="order-btn">📱 Order Now - ₹180</a>
+      </div>
     </div>
 
-    <div style="background: #1f2937; color: #d1d5db; padding: 30px 20px; text-align: center; margin-top: 40px;">
-        <p style="margin: 0; font-size: 16px; font-weight: bold;">Goan Heritage Flavors</p>
-        <p style="margin: 8px 0; font-size: 14px;">A Self Help Group of Joy of Life NGO Goa</p>
-        <p style="margin: 8px 0; font-size: 13px;">Cancer Children Care • Zero Hunger Meals • Essential Threads</p>
-        <p style="margin-top: 15px; font-size: 12px; opacity: 0.7;">© 2026 Joy of Life NGO Goa | Preserving 450 Years</p>
+    <!-- SECTION 2: INDO-PORTUGUESE GOAN SWEETS -->
+    <h2 class="section-title">2. Indo-Portuguese Goan Sweets</h2>
+    <p class="section-subtitle">Traditional sweets brought by Portuguese to Goa since 1510. 100% Vegetarian.</p>
+    <div class="products">
+      <div class="product">
+        <h3>DOCE DE GARAO 2kg</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Semolina coconut sweet. 100% Vegetarian</p>
+        <p class="description"><strong>Description:</strong> Traditional Goan wedding sweet made with semolina, coconut & jaggery. Rich & festive. Serves 20-25.</p>
+        <div class="authentic-tag">PORTUGUESE HERITAGE - Wedding Special</div>
+        <div class="heritage">Doce de Garao is the most sacred Goan sweet served at Catholic weddings since 1600s.</div>
+        <a href="https://wa.me/919420429066?text=Order%20Doce%20de%20Garao%202kg" class="order-btn">📱 Ask Price & Order</a>
+      </div>
+
+      <div class="product">
+        <h3>DODOL 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Sticky Goan sweet. 100% Vegetarian</p>
+        <p class="description"><strong>Description:</strong> Traditional Goan sweet with rice flour, coconut milk & palm jaggery. Stirred 4 hours.</p>
+        <div class="authentic-tag">PORTUGUESE HERITAGE - Christmas Special</div>
+        <a href="https://wa.me/919356476494?text=Order%20Dodol%20250g%20-%20₹250" class="order-btn">📱 Order Now - ₹250</a>
+      </div>
+
+      <div class="product">
+        <h3>BEBINCA 500g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored 7-layer Goan pudding.</p>
+        <p class="description"><strong>Description:</strong> with coconut milk, eggs & jaggery. Baked for 6 hours. Queen of Goan desserts.</p>
+        <div class="authentic-tag">PORTUGUESE HERITAGE - Since 1600s</div>
+        <div class="heritage">Bebinca was created by Goan nuns in 1600s using Portuguese baking techniques.</div>
+        <a href="https://wa.me/919404434004?text=Order%20Bebinca%20500g%20-%20₹650" class="order-btn">📱 Order Now - ₹650</a>
+      </div>
+
+      <div class="product">
+        <h3>BOLINHAS 12pcs</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Coconut cookies. 100% Vegetarian</p>
+        <p class="description"><strong>Description:</strong> Soft coconut cookies with semolina. Traditional Goan tea-time snack from Portuguese era.</p>
+        <div class="authentic-tag">PORTUGUESE HERITAGE - Tea Time</div>
+        <a href="https://wa.me/919420429066?text=Order%20Bolinhas%2012pcs%20-%20₹300" class="order-btn">📱 Order Now - ₹300</a>
+      </div>
+
+      <div class="product">
+        <h3>PERAD 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Guava cheese. 100% Vegetarian</p>
+        <p class="description"><strong>Description:</strong> Made from ripe Goan guavas & sugar. Thick, sweet preserve. Christmas special.</p>
+        <div class="authentic-tag">PORTUGUESE HERITAGE - Guava Cheese</div>
+        <a href="https://wa.me/919356476494?text=Order%20Perad%20250g%20-%20₹280" class="order-btn">📱 Order Now - ₹280</a>
+      </div>
     </div>
-</body>
-</html>
+
+    <!-- SECTION 3: CHICKEN -->
+    <h2 class="section-title">3. Chicken</h2>
+    <p class="section-subtitle">For non-vegetarian customers. Kept separate from Beef.</p>
+    <div class="products">
+      <div class="product">
+        <h3>CHICKEN XACUTI 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Rich chicken curry.</p>
+        <p class="description"><strong>Description:</strong> with roasted coconut, poppy seeds & Goan spices. Creamy gravy. Heat & eat.</p>
+        <div class="authentic-tag">CONTAINS CHICKEN</div>
+        <a href="https://wa.me/919404434004?text=Order%20Chicken%20Xacuti%20250g%20-%20₹320" class="order-btn">📱 Order Now - ₹320</a>
+      </div>
+
+      <div class="product">
+        <h3>CHICKEN CAFREAL 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Green masala chicken - legs only, skinless</p>
+        <p class="description"><strong>Description:</strong> Made with chicken legs only, skinless. Marinated in coriander, mint & Goan spices. Grilled style. Heat & eat.</p>
+        <div class="authentic-tag">CONTAINS CHICKEN - Portuguese-African</div>
+        <a href="https://wa.me/919420429066?text=Order%20Chicken%20Cafreal%20250g%20-%20₹320" class="order-btn">📱 Order Now - ₹320</a>
+      </div>
+
+      <div class="product">
+        <h3>CHICKEN ROAST 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Festive roasted chicken</p>
+        <p class="description"><strong>Description:</strong> Marinated in Goan spices. Christmas & wedding special. Heat & eat.</p>
+        <div class="authentic-tag">CONTAINS CHICKEN - Festive Special</div>
+        <a href="https://wa.me/919356476494?text=Order%20Chicken%20Roast%20250g%20-%20₹350" class="order-btn">📱 Order Now - ₹350</a>
+      </div>
+    </div>
+
+    <!-- SECTION 4: BEEF -->
+    <h2 class="section-title">4. Beef</h2>
+    <p class="section-subtitle">For non-vegetarian customers. Kept separate from Chicken.</p>
+    <div class="products">
+      <div class="product">
+        <h3>BEEF CHILLY FRY 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Spicy beef strips</p>
+        <p class="description"><strong>Description:</strong> Fried with onions, chilies & Goan vinegar. Popular taverna dish. Ready to eat.</p>
+        <div class="authentic-tag">CONTAINS BEEF</div>
+        <a href="https://wa.me/919404434004?text=Order%20Beef%20Chilly%20Fry%20250g%20-%20₹380" class="order-btn">📱 Order Now - ₹380</a>
+      </div>
+
+      <div class="product">
+        <h3>BEEF ROAST 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Slow-roasted beef</p>
+        <p class="description"><strong>Description:</strong> Marinated in Goan spices. Christmas special. Heat & eat.</p>
+        <div class="authentic-tag">CONTAINS BEEF</div>
+        <a href="https://wa.me/919420429066?text=Order%20Beef%20Roast%20250g%20-%20₹400" class="order-btn">📱 Order Now - ₹400</a>
+      </div>
+    </div>
+
+    <!-- SECTION 5: PORK -->
+    <h2 class="section-title">5. Pork</h2>
+    <div class="products">
+      <div class="product">
+        <h3>PORK SORPOTEL 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Traditional Goan pork dish</p>
+        <p class="description"><strong>Description:</strong> with liver, heart & Goan vinegar. Slow-cooked 6 hours. Heat & eat.</p>
+        <div class="authentic-tag">CONTAINS PORK - Portuguese Heritage</div>
+        <a href="https://wa.me/919356476494?text=Order%20Pork%20Sorpotel%20250g%20-%20₹400" class="order-btn">📱 Order Now - ₹400</a>
+      </div>
+
+      <div class="product">
+        <h3>PORK VINDALHO 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Fiery pork curry</p>
+        <p class="description"><strong>Description:</strong> with garlic, chilies & toddy vinegar. The original "Vindaloo". Ready to eat.</p>
+        <div class="authentic-tag">CONTAINS PORK - Since 1510</div>
+        <a href="https://wa.me/919404434004?text=Order%20Pork%20Vindalho%20250g%20-%20₹420" class="order-btn">📱 Order Now - ₹420</a>
+      </div>
+    </div>
+
+    <!-- SECTION 6: SEAFOOD -->
+    <h2 class="section-title">6. Seafood</h2>
+    <div class="products">
+      <div class="product">
+        <h3>GOAN FISH CURRY 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Traditional fish curry</p>
+        <p class="description"><strong>Description:</strong> with coconut milk, kokum & Goan spices. Made with fresh catch. Heat & eat.</p>
+        <div class="authentic-tag">CONTAINS FISH - Coconut Curry</div>
+        <a href="https://wa.me/919420429066?text=Order%20Goan%20Fish%20Curry%20250g%20-%20₹300" class="order-btn">📱 Order Now - ₹300</a>
+      </div>
+
+      <div class="product">
+        <h3>PRAWNS MASALA 250g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Spicy prawn curry</p>
+        <p class="description"><strong>Description:</strong> with Goan masala. Made with fresh Goan prawns. Ready to eat.</p>
+        <div class="authentic-tag">CONTAINS PRAWNS - Coastal Special</div>
+        <a href="https://wa.me/919356476494?text=Order%20Prawns%20Masala%20250g%20-%20₹450" class="order-btn">📱 Order Now - ₹450</a>
+      </div>
+    </div>
+
+    <!-- SECTION 7: PICKLE -->
+    <h2 class="section-title">7. Pickle - All 200g</h2>
+    <div class="products">
+      <div class="product">
+        <h3>MANGO PICKLE 200g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Raw mango pickle</p>
+        <p class="description"><strong>Description:</strong> Raw mango pieces pickled with Goan spices & oil. Tangy & spicy. Shelf stable.</p>
+        <div class="authentic-tag">Summer Special</div>
+        <a href="https://wa.me/919404434004?text=Order%20Mango%20Pickle%20200g%20-%20₹199" class="order-btn">📱 Order Now - ₹199</a>
+      </div>
+
+      <div class="product">
+        <h3>PRAWN PICKLE 200g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Spicy prawn pickle</p>
+        <p class="description"><strong>Description:</strong> Fresh prawns pickled with Goan spices & oil. Coastal delicacy.</p>
+        <div class="authentic-tag">CONTAINS PRAWNS - Non-Veg Pickle</div>
+        <a href="https://wa.me/919420429066?text=Order%20Prawn%20Pickle%20200g%20-%20₹199" class="order-btn">📱 Order Now - ₹199</a>
+      </div>
+    </div>
+
+    <!-- SECTION 8: MOLHO & BALCHAO -->
+    <h2 class="section-title">8. Molho & Balchao - All 200g</h2>
+    <div class="products">
+      <div class="product">
+        <h3>FISH MOLHO 200g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Goan sauce base</p>
+        <p class="description"><strong>Description:</strong> with onions, tomatoes & spices. For fish curries. Ready to cook.</p>
+        <div class="authentic-tag">Sauce Base</div>
+        <a href="https://wa.me/919356476494?text=Order%20Fish%20Molho%20200g%20-%20₹280" class="order-btn">📱 Order Now - ₹280</a>
+      </div>
+
+      <div class="product">
+        <h3>PRAWNS BALCHAO 200g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Spicy prawn pickle-curry</p>
+        <p class="description"><strong>Description:</strong> with toddy vinegar. Can be stored for months. Eat with rice or bread.</p>
+        <div class="authentic-tag">CONTAINS PRAWNS - Pickle Curry</div>
+        <a href="https://wa.me/919404434004?text=Order%20Prawns%20Balchao%20200g%20-%20₹400" class="order-btn">📱 Order Now - ₹400</a>
+      </div>
+    </div>
+
+    <!-- SECTION 9: BIRIYANI -->
+    <h2 class="section-title">9. Biriyani - All 1kg</h2>
+    <p class="section-subtitle">Goan Style Biriyani - Different from Indian style</p>
+    <div class="products">
+      <div class="product">
+        <h3>GOAN CHICKEN BIRIYANI 1kg</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Goan-style chicken biriyani with coconut</p>
+        <p class="description"><strong>Description:</strong> Made with Goan spices, coconut & fried onions. Traditional Goan recipe. Serves 3-4.</p>
+        <div class="authentic-tag">GOAN STYLE - CONTAINS CHICKEN</div>
+        <a href="https://wa.me/919420429066?text=Order%20Goan%20Chicken%20Biriyani%201kg" class="order-btn">📱 Ask Price & Order</a>
+      </div>
+
+      <div class="product">
+        <h3>GOAN PRAWNS BIRIYANI 1kg</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Fresh prawns with Goan spices & basmati</p>
+        <p class="description"><strong>Description:</strong> Coastal Goan special with fresh prawns & coconut. Serves 3-4. Ready to eat.</p>
+        <div class="authentic-tag">GOAN STYLE - CONTAINS PRAWNS</div>
+        <a href="https://wa.me/919356476494?text=Order%20Goan%20Prawns%20Biriyani%201kg" class="order-btn">📱 Ask Price & Order</a>
+      </div>
+    </div>
+
+    <!-- SECTION 10: GOAN KITCHEN -->
+    <h2 class="section-title">10. Goan Kitchen Essentials</h2>
+    <p class="section-subtitle">Authentic Goan ingredients for your kitchen - All 200g</p>
+    <div class="products">
+      <div class="product">
+        <h3>RECHEADO MASALA 200g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Red spice paste for fish/meat</p>
+        <p class="description"><strong>Description:</strong> Traditional Goan Recheado paste with chilies & vinegar. For stuffed fish/prawns.</p>
+        <div class="authentic-tag">Kitchen Essential</div>
+        <a href="https://wa.me/919404434004?text=Order%20Recheado%20Masala%20200g%20-%20₹199" class="order-btn">📱 Order Now - ₹199</a>
+      </div>
+
+      <div class="product">
+        <h3>GREEN MASALA 200g</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Green paste for Cafreal</p>
+        <p class="description"><strong>Description:</strong> Coriander, mint & Goan spices. Perfect for Chicken Cafreal. Ready to use.</p>
+        <div class="authentic-tag">Kitchen Essential</div>
+        <a href="https://wa.me/919420429066?text=Order%20Green%20Masala%20200g%20-%20₹199" class="order-btn">📱 Order Now - ₹199</a>
+      </div>
+
+      <div class="product">
+        <h3>GOAN TODDY VINEGAR 500ml</h3>
+        <p class="made-by">Made by Goan Grandmothers</p>
+        <p class="ngo-line">Every purchase supports Joy of Life NGO Goa - Children & Elders</p>
+        <p class="homely-tag">Homely prepared authentic Goan Portuguese traditional</p>
+        <p class="flavor-line">Flavored Pure toddy vinegar</p>
+        <p class="description"><strong>Description:</strong> Traditional Goan toddy vinegar. Essential for Sorpotel, Vindalho, Balchao.</p>
+        <div class="authentic-tag">Kitchen Essential</div>
+        <a href="https://wa.me/919356476494?text=Order%20Goan%20Toddy%20Vinegar%20500ml%20-%20₹280" class="order-btn">📱 Order Now - ₹280</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="service-area">
+    <h3>📍 Service Area for Orders</h3>
+    <p style="margin: 5px 0; font-size: 1rem; font-weight: bold;">We deliver across Goa</p>
+    <p style="margin: 5px 0; font-size: 0.9rem;">Panjim • Mapusa • Margao • Vasco • Porvorim • Calangute • Candolim • Quepem</p>
+    <p style="margin: 10px 0 0 0; font-size: 0.85rem; opacity: 0.9;">Other areas in Goa: Delivery charges apply | WhatsApp us to confirm</p>
+  </div>
+
+  <footer>
+    <h3 style="color: #D4AF37; margin: 0 0 15px 0; font-size: 1.2rem;">Our Promise:
